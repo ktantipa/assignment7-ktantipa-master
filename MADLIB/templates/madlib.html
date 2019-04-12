@@ -1,0 +1,27 @@
+<!-- my_application/templates/get_example.html -->
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+{% extends "layout.html" %}
+
+    {% block body %}
+        <div>
+            <h2> MADLIB - Four hourseman of the Apoclypse</h2>
+            <ul>
+            </ul>
+        </div>
+        <div>
+
+            <button id = "btn"  class = "Company_1">Apple</button>
+            <button id = "btn1" class = "Company_2">Netflex</button>
+            <button id = "btn2" class = "Company_3">Tesla</button>
+            <button id = "btn3" class = "Company_4">Amazon</button>
+   {% for entry in entries %}
+            <div id = "rest_div" class = "madlibContainer">
+
+            </div>
+   {% endfor %}
+    <script src ="{{ url_for('static',filename='Mad-lib.js') }}"></script>
+
+        </div>
+    {% endblock %}
